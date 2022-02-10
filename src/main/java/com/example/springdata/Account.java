@@ -1,20 +1,27 @@
-package com.example.springdata.Account;
+package com.example.springdata;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Date;
 
+//@Entity(name = "users")
 @Entity
 public class Account {
 
     @Id @GeneratedValue
     private Long id;
 
+    @Column(nullable = false, unique = true)
     private String username;
 
     private String password;
 
-//    private String email;
+    @Temporal(TemporalType.TIME)
+    private Date created = new Date();
+
+    private String yes;
+
+    @Transient
+    private String no;
 
     public Long getId() {
         return id;
@@ -40,11 +47,4 @@ public class Account {
         this.password = password;
     }
 
-//    public String getEmail() {
-//        return email;
-//    }
-
-//    public void setEmail(String email) {
-//        this.email = email;
-//    }
 }

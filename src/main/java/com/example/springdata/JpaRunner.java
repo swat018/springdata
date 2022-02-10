@@ -1,6 +1,5 @@
 package com.example.springdata;
 
-import com.example.springdata.Account.Account;
 import org.hibernate.Session;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;

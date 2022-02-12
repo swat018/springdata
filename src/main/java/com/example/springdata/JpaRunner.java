@@ -18,39 +18,37 @@ public class JpaRunner implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-//        Account account = new Account();
-//        account.setUsername("jinwoo");
-//        account.setPassword("jpa");
+//        Post post = new Post();
+//        post.setTitle("Spring Data JPA 언제 보나.");
 //
-//        Study study = new Study();
-//        study.setName("Spring Data JPA");
+//        Comment comment = new Comment();
+//        comment.setComment("빨리 보고 싶어요.");
+//        post.addComment(comment);
 //
-//        account.addStudy(study);
-//
-//        Session session = entityManager.unwrap(Session.class);
-//        session.save(account);
-//        session.save(study);
-//
-//        Account jinwoo = session.load(Account.class, account.getId());
-//        jinwoo.setUsername("swat018");
-//        jinwoo.setUsername("jinwoo2");
-//        jinwoo.setUsername("jinwoo");
-//        System.out.println("==========================");
-//        System.out.println(jinwoo.getUsername());
-
-        Post post = new Post();
-        post.setTitle("Spring Data JPA 언제 보나.");
-
-        Comment comment = new Comment();
-        comment.setComment("빨리 보고 싶어요.");
-        post.addComment(comment);
-
-        Comment comment1 = new Comment();
-        comment1.setComment("곧 보여드릴게요.");
-        post.addComment(comment1);
+//        Comment comment1 = new Comment();
+//        comment1.setComment("곧 보여드릴게요.");
+//        post.addComment(comment1);
 
         Session session = entityManager.unwrap(Session.class);
-        session.save(post);
+//        session.save(post);
+
+//        Post post = session.get(Post.class, 1L);
+//        System.out.println("======================");
+//        System.out.println(post.getTitle());
+
+//        Comment comment = session.get(Comment.class, 3L);
+//        System.out.println("======================");
+//        System.out.println(comment.getComment());
+//        System.out.println(comment.getPost().getTitle() );
+
+        Post post = session.get(Post.class, 1L);
+        System.out.println("======================");
+        System.out.println(post.getTitle());
+
+        post.getCommmets().forEach(c -> {
+            System.out.println("========================");
+            System.out.println(c.getComment());
+        });
 
 
     }

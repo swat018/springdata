@@ -44,4 +44,11 @@ public class Post {
     public void setCommmets(Set<Comment> commmets) {
         this.commmets = commmets;
     }
+
+    @Override
+    public String toString() {
+        return "Post{" +
+                "title='" + title + '\'' +
+                '}';
+    }
 }

@@ -12,13 +12,17 @@ import javax.transaction.Transactional;
 public class JpaRunner implements ApplicationRunner {
 
     @Autowired
-//    PostRepository postRepository;
-    Jinwoo jinwoo;
+    PostRepository postRepository;
+
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-//        postRepository.findAll().forEach(System.out::println);
-        System.out.println("=======================");
-        System.out.println(jinwoo.getName());
+        Post post = new Post();
+        post.setTitle("spring");
+
+        Comment comment = new Comment();
+        comment.setComment("hello");
+
+        postRepository.save(post);
     }
 }

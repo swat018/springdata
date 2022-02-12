@@ -9,3 +9,4 @@
   - JPA 프르그래밍: 엔티티 상태와 Cascade
   - JPA 프로그래밍: Fetch
   - JPA 프로그래밍: Query
+  - 스프링 데이터 JPA 소개 및 원리

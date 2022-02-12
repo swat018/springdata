@@ -7,3 +7,4 @@
   - JPA 프로그래밍: Value 타입 매핑
   - JPA 프로그래밍: 1대다 매팅
   - JPA 프르그래밍: 엔티티 상태와 Cascade
+  - JPA 프로그래밍: Fetch

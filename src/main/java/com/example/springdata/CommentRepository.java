@@ -6,11 +6,13 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.RepositoryDefinition;
 
 import java.util.List;
+import java.util.stream.Stream;
 
 public interface CommentRepository extends MyRepository<Comment, Long> {
 
-//    @Query(value = "SELECT c FROM Comment AS c", nativeQuery = true)
-    List<Comment> findByCommentContains(String keyword);
-
-    Page<Comment> findByLikeCountGreaterThanAndPost(int likeCount, Post post, Pageable pageable);
+//    List<Comment> findByCommentContainsIgnoreCaseAndLikeCountGreaterThan(String keyword, int likeCount);
+//    List<Comment> findByCommentContainsIgnoreCaseOrderByLikeCountDesc(String keyword);
+//    List<Comment> findByCommentContainsIgnoreCaseOrderByLikeCountAsc(String keyword);
+//    Page<Comment> findByCommentContainsIgnoreCase(String keyword, Pageable pageable);
+    Stream<Comment> findByCommentContainsIgnoreCase(String keyword, Pageable pageable);
 }

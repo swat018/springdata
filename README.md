@@ -15,3 +15,4 @@
 - 2부. 스프링 데이터 JPA 활용
   -  
   - 스프링 데이터 Common: Repository
+  - 스프링 데이터 Common: 인터페이스 정의하기

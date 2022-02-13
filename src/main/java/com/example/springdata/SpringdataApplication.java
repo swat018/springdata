@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Import;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-public class SpringdataApplication {
+ public class SpringdataApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SpringdataApplication.class, args);
